@@ -1884,249 +1884,118 @@ Hint: The features are the column names. You can print them out.
 
 ```python
 df.describe()
+df.columns.values
 ```
 
 
 
 
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>full_sq</th>
-      <th>life_sq</th>
-      <th>floor</th>
-      <th>max_floor</th>
-      <th>material</th>
-      <th>build_year</th>
-      <th>num_room</th>
-      <th>kitch_sq</th>
-      <th>state</th>
-      <th>...</th>
-      <th>cafe_count_5000_price_2500</th>
-      <th>cafe_count_5000_price_4000</th>
-      <th>cafe_count_5000_price_high</th>
-      <th>big_church_count_5000</th>
-      <th>church_count_5000</th>
-      <th>mosque_count_5000</th>
-      <th>leisure_count_5000</th>
-      <th>sport_count_5000</th>
-      <th>market_count_5000</th>
-      <th>price_doc</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>30471.000000</td>
-      <td>30471.000000</td>
-      <td>24088.000000</td>
-      <td>30304.000000</td>
-      <td>20899.000000</td>
-      <td>20899.000000</td>
-      <td>1.686600e+04</td>
-      <td>20899.000000</td>
-      <td>20899.000000</td>
-      <td>16912.000000</td>
-      <td>...</td>
-      <td>30471.000000</td>
-      <td>30471.000000</td>
-      <td>30471.000000</td>
-      <td>30471.000000</td>
-      <td>30471.000000</td>
-      <td>30471.000000</td>
-      <td>30471.000000</td>
-      <td>30471.000000</td>
-      <td>30471.000000</td>
-      <td>3.047100e+04</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>15237.917397</td>
-      <td>54.214269</td>
-      <td>34.403271</td>
-      <td>7.670803</td>
-      <td>12.558974</td>
-      <td>1.827121</td>
-      <td>3.068057e+03</td>
-      <td>1.909804</td>
-      <td>6.399301</td>
-      <td>2.107025</td>
-      <td>...</td>
-      <td>32.058318</td>
-      <td>10.783860</td>
-      <td>1.771783</td>
-      <td>15.045552</td>
-      <td>30.251518</td>
-      <td>0.442421</td>
-      <td>8.648814</td>
-      <td>52.796593</td>
-      <td>5.987070</td>
-      <td>7.123035e+06</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>8796.501536</td>
-      <td>38.031487</td>
-      <td>52.285733</td>
-      <td>5.319989</td>
-      <td>6.756550</td>
-      <td>1.481154</td>
-      <td>1.543878e+05</td>
-      <td>0.851805</td>
-      <td>28.265979</td>
-      <td>0.880148</td>
-      <td>...</td>
-      <td>73.465611</td>
-      <td>28.385679</td>
-      <td>5.418807</td>
-      <td>29.118668</td>
-      <td>47.347938</td>
-      <td>0.609269</td>
-      <td>20.580741</td>
-      <td>46.292660</td>
-      <td>4.889219</td>
-      <td>4.780111e+06</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>0.000000e+00</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000e+05</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>7620.500000</td>
-      <td>38.000000</td>
-      <td>20.000000</td>
-      <td>3.000000</td>
-      <td>9.000000</td>
-      <td>1.000000</td>
-      <td>1.967000e+03</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>...</td>
-      <td>2.000000</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>2.000000</td>
-      <td>9.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>11.000000</td>
-      <td>1.000000</td>
-      <td>4.740002e+06</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>15238.000000</td>
-      <td>49.000000</td>
-      <td>30.000000</td>
-      <td>6.500000</td>
-      <td>12.000000</td>
-      <td>1.000000</td>
-      <td>1.979000e+03</td>
-      <td>2.000000</td>
-      <td>6.000000</td>
-      <td>2.000000</td>
-      <td>...</td>
-      <td>8.000000</td>
-      <td>2.000000</td>
-      <td>0.000000</td>
-      <td>7.000000</td>
-      <td>16.000000</td>
-      <td>0.000000</td>
-      <td>2.000000</td>
-      <td>48.000000</td>
-      <td>5.000000</td>
-      <td>6.274411e+06</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>22855.500000</td>
-      <td>63.000000</td>
-      <td>43.000000</td>
-      <td>11.000000</td>
-      <td>17.000000</td>
-      <td>2.000000</td>
-      <td>2.005000e+03</td>
-      <td>2.000000</td>
-      <td>9.000000</td>
-      <td>3.000000</td>
-      <td>...</td>
-      <td>21.000000</td>
-      <td>5.000000</td>
-      <td>1.000000</td>
-      <td>12.000000</td>
-      <td>28.000000</td>
-      <td>1.000000</td>
-      <td>7.000000</td>
-      <td>76.000000</td>
-      <td>10.000000</td>
-      <td>8.300000e+06</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>30473.000000</td>
-      <td>5326.000000</td>
-      <td>7478.000000</td>
-      <td>77.000000</td>
-      <td>117.000000</td>
-      <td>6.000000</td>
-      <td>2.005201e+07</td>
-      <td>19.000000</td>
-      <td>2014.000000</td>
-      <td>33.000000</td>
-      <td>...</td>
-      <td>377.000000</td>
-      <td>147.000000</td>
-      <td>30.000000</td>
-      <td>151.000000</td>
-      <td>250.000000</td>
-      <td>2.000000</td>
-      <td>106.000000</td>
-      <td>218.000000</td>
-      <td>21.000000</td>
-      <td>1.111111e+08</td>
-    </tr>
-  </tbody>
-</table>
-<p>8 rows × 276 columns</p>
-</div>
+    array(['id', 'timestamp', 'full_sq', 'life_sq', 'floor', 'max_floor',
+           'material', 'build_year', 'num_room', 'kitch_sq', 'state',
+           'product_type', 'sub_area', 'area_m', 'raion_popul',
+           'green_zone_part', 'indust_part', 'children_preschool',
+           'preschool_quota', 'preschool_education_centers_raion',
+           'children_school', 'school_quota', 'school_education_centers_raion',
+           'school_education_centers_top_20_raion', 'hospital_beds_raion',
+           'healthcare_centers_raion', 'university_top_20_raion',
+           'sport_objects_raion', 'additional_education_raion',
+           'culture_objects_top_25', 'culture_objects_top_25_raion',
+           'shopping_centers_raion', 'office_raion',
+           'thermal_power_plant_raion', 'incineration_raion',
+           'oil_chemistry_raion', 'radiation_raion', 'railroad_terminal_raion',
+           'big_market_raion', 'nuclear_reactor_raion',
+           'detention_facility_raion', 'full_all', 'male_f', 'female_f',
+           'young_all', 'young_male', 'young_female', 'work_all', 'work_male',
+           'work_female', 'ekder_all', 'ekder_male', 'ekder_female', '0_6_all',
+           '0_6_male', '0_6_female', '7_14_all', '7_14_male', '7_14_female',
+           '0_17_all', '0_17_male', '0_17_female', '16_29_all', '16_29_male',
+           '16_29_female', '0_13_all', '0_13_male', '0_13_female',
+           'raion_build_count_with_material_info', 'build_count_block',
+           'build_count_wood', 'build_count_frame', 'build_count_brick',
+           'build_count_monolith', 'build_count_panel', 'build_count_foam',
+           'build_count_slag', 'build_count_mix',
+           'raion_build_count_with_builddate_info', 'build_count_before_1920',
+           'build_count_1921-1945', 'build_count_1946-1970',
+           'build_count_1971-1995', 'build_count_after_1995', 'ID_metro',
+           'metro_min_avto', 'metro_km_avto', 'metro_min_walk',
+           'metro_km_walk', 'kindergarten_km', 'school_km', 'park_km',
+           'green_zone_km', 'industrial_km', 'water_treatment_km',
+           'cemetery_km', 'incineration_km', 'railroad_station_walk_km',
+           'railroad_station_walk_min', 'ID_railroad_station_walk',
+           'railroad_station_avto_km', 'railroad_station_avto_min',
+           'ID_railroad_station_avto', 'public_transport_station_km',
+           'public_transport_station_min_walk', 'water_km', 'water_1line',
+           'mkad_km', 'ttk_km', 'sadovoe_km', 'bulvar_ring_km', 'kremlin_km',
+           'big_road1_km', 'ID_big_road1', 'big_road1_1line', 'big_road2_km',
+           'ID_big_road2', 'railroad_km', 'railroad_1line',
+           'zd_vokzaly_avto_km', 'ID_railroad_terminal',
+           'bus_terminal_avto_km', 'ID_bus_terminal', 'oil_chemistry_km',
+           'nuclear_reactor_km', 'radiation_km', 'power_transmission_line_km',
+           'thermal_power_plant_km', 'ts_km', 'big_market_km',
+           'market_shop_km', 'fitness_km', 'swim_pool_km', 'ice_rink_km',
+           'stadium_km', 'basketball_km', 'hospice_morgue_km',
+           'detention_facility_km', 'public_healthcare_km', 'university_km',
+           'workplaces_km', 'shopping_centers_km', 'office_km',
+           'additional_education_km', 'preschool_km', 'big_church_km',
+           'church_synagogue_km', 'mosque_km', 'theater_km', 'museum_km',
+           'exhibition_km', 'catering_km', 'ecology', 'green_part_500',
+           'prom_part_500', 'office_count_500', 'office_sqm_500',
+           'trc_count_500', 'trc_sqm_500', 'cafe_count_500',
+           'cafe_sum_500_min_price_avg', 'cafe_sum_500_max_price_avg',
+           'cafe_avg_price_500', 'cafe_count_500_na_price',
+           'cafe_count_500_price_500', 'cafe_count_500_price_1000',
+           'cafe_count_500_price_1500', 'cafe_count_500_price_2500',
+           'cafe_count_500_price_4000', 'cafe_count_500_price_high',
+           'big_church_count_500', 'church_count_500', 'mosque_count_500',
+           'leisure_count_500', 'sport_count_500', 'market_count_500',
+           'green_part_1000', 'prom_part_1000', 'office_count_1000',
+           'office_sqm_1000', 'trc_count_1000', 'trc_sqm_1000',
+           'cafe_count_1000', 'cafe_sum_1000_min_price_avg',
+           'cafe_sum_1000_max_price_avg', 'cafe_avg_price_1000',
+           'cafe_count_1000_na_price', 'cafe_count_1000_price_500',
+           'cafe_count_1000_price_1000', 'cafe_count_1000_price_1500',
+           'cafe_count_1000_price_2500', 'cafe_count_1000_price_4000',
+           'cafe_count_1000_price_high', 'big_church_count_1000',
+           'church_count_1000', 'mosque_count_1000', 'leisure_count_1000',
+           'sport_count_1000', 'market_count_1000', 'green_part_1500',
+           'prom_part_1500', 'office_count_1500', 'office_sqm_1500',
+           'trc_count_1500', 'trc_sqm_1500', 'cafe_count_1500',
+           'cafe_sum_1500_min_price_avg', 'cafe_sum_1500_max_price_avg',
+           'cafe_avg_price_1500', 'cafe_count_1500_na_price',
+           'cafe_count_1500_price_500', 'cafe_count_1500_price_1000',
+           'cafe_count_1500_price_1500', 'cafe_count_1500_price_2500',
+           'cafe_count_1500_price_4000', 'cafe_count_1500_price_high',
+           'big_church_count_1500', 'church_count_1500', 'mosque_count_1500',
+           'leisure_count_1500', 'sport_count_1500', 'market_count_1500',
+           'green_part_2000', 'prom_part_2000', 'office_count_2000',
+           'office_sqm_2000', 'trc_count_2000', 'trc_sqm_2000',
+           'cafe_count_2000', 'cafe_sum_2000_min_price_avg',
+           'cafe_sum_2000_max_price_avg', 'cafe_avg_price_2000',
+           'cafe_count_2000_na_price', 'cafe_count_2000_price_500',
+           'cafe_count_2000_price_1000', 'cafe_count_2000_price_1500',
+           'cafe_count_2000_price_2500', 'cafe_count_2000_price_4000',
+           'cafe_count_2000_price_high', 'big_church_count_2000',
+           'church_count_2000', 'mosque_count_2000', 'leisure_count_2000',
+           'sport_count_2000', 'market_count_2000', 'green_part_3000',
+           'prom_part_3000', 'office_count_3000', 'office_sqm_3000',
+           'trc_count_3000', 'trc_sqm_3000', 'cafe_count_3000',
+           'cafe_sum_3000_min_price_avg', 'cafe_sum_3000_max_price_avg',
+           'cafe_avg_price_3000', 'cafe_count_3000_na_price',
+           'cafe_count_3000_price_500', 'cafe_count_3000_price_1000',
+           'cafe_count_3000_price_1500', 'cafe_count_3000_price_2500',
+           'cafe_count_3000_price_4000', 'cafe_count_3000_price_high',
+           'big_church_count_3000', 'church_count_3000', 'mosque_count_3000',
+           'leisure_count_3000', 'sport_count_3000', 'market_count_3000',
+           'green_part_5000', 'prom_part_5000', 'office_count_5000',
+           'office_sqm_5000', 'trc_count_5000', 'trc_sqm_5000',
+           'cafe_count_5000', 'cafe_sum_5000_min_price_avg',
+           'cafe_sum_5000_max_price_avg', 'cafe_avg_price_5000',
+           'cafe_count_5000_na_price', 'cafe_count_5000_price_500',
+           'cafe_count_5000_price_1000', 'cafe_count_5000_price_1500',
+           'cafe_count_5000_price_2500', 'cafe_count_5000_price_4000',
+           'cafe_count_5000_price_high', 'big_church_count_5000',
+           'church_count_5000', 'mosque_count_5000', 'leisure_count_5000',
+           'sport_count_5000', 'market_count_5000', 'price_doc'], dtype=object)
 
 
 
@@ -2204,6 +2073,306 @@ data_type
     price_doc                                  int64
     Length: 292, dtype: object
 
+
+
+
+```python
+for i in range(len(df.dtypes)):
+    print (df.dtypes.index[i], df.dtypes[i])
+```
+
+    id int64
+    timestamp object
+    full_sq int64
+    life_sq float64
+    floor float64
+    max_floor float64
+    material float64
+    build_year float64
+    num_room float64
+    kitch_sq float64
+    state float64
+    product_type object
+    sub_area object
+    area_m float64
+    raion_popul int64
+    green_zone_part float64
+    indust_part float64
+    children_preschool int64
+    preschool_quota float64
+    preschool_education_centers_raion int64
+    children_school int64
+    school_quota float64
+    school_education_centers_raion int64
+    school_education_centers_top_20_raion int64
+    hospital_beds_raion float64
+    healthcare_centers_raion int64
+    university_top_20_raion int64
+    sport_objects_raion int64
+    additional_education_raion int64
+    culture_objects_top_25 object
+    culture_objects_top_25_raion int64
+    shopping_centers_raion int64
+    office_raion int64
+    thermal_power_plant_raion object
+    incineration_raion object
+    oil_chemistry_raion object
+    radiation_raion object
+    railroad_terminal_raion object
+    big_market_raion object
+    nuclear_reactor_raion object
+    detention_facility_raion object
+    full_all int64
+    male_f int64
+    female_f int64
+    young_all int64
+    young_male int64
+    young_female int64
+    work_all int64
+    work_male int64
+    work_female int64
+    ekder_all int64
+    ekder_male int64
+    ekder_female int64
+    0_6_all int64
+    0_6_male int64
+    0_6_female int64
+    7_14_all int64
+    7_14_male int64
+    7_14_female int64
+    0_17_all int64
+    0_17_male int64
+    0_17_female int64
+    16_29_all int64
+    16_29_male int64
+    16_29_female int64
+    0_13_all int64
+    0_13_male int64
+    0_13_female int64
+    raion_build_count_with_material_info float64
+    build_count_block float64
+    build_count_wood float64
+    build_count_frame float64
+    build_count_brick float64
+    build_count_monolith float64
+    build_count_panel float64
+    build_count_foam float64
+    build_count_slag float64
+    build_count_mix float64
+    raion_build_count_with_builddate_info float64
+    build_count_before_1920 float64
+    build_count_1921-1945 float64
+    build_count_1946-1970 float64
+    build_count_1971-1995 float64
+    build_count_after_1995 float64
+    ID_metro int64
+    metro_min_avto float64
+    metro_km_avto float64
+    metro_min_walk float64
+    metro_km_walk float64
+    kindergarten_km float64
+    school_km float64
+    park_km float64
+    green_zone_km float64
+    industrial_km float64
+    water_treatment_km float64
+    cemetery_km float64
+    incineration_km float64
+    railroad_station_walk_km float64
+    railroad_station_walk_min float64
+    ID_railroad_station_walk float64
+    railroad_station_avto_km float64
+    railroad_station_avto_min float64
+    ID_railroad_station_avto int64
+    public_transport_station_km float64
+    public_transport_station_min_walk float64
+    water_km float64
+    water_1line object
+    mkad_km float64
+    ttk_km float64
+    sadovoe_km float64
+    bulvar_ring_km float64
+    kremlin_km float64
+    big_road1_km float64
+    ID_big_road1 int64
+    big_road1_1line object
+    big_road2_km float64
+    ID_big_road2 int64
+    railroad_km float64
+    railroad_1line object
+    zd_vokzaly_avto_km float64
+    ID_railroad_terminal int64
+    bus_terminal_avto_km float64
+    ID_bus_terminal int64
+    oil_chemistry_km float64
+    nuclear_reactor_km float64
+    radiation_km float64
+    power_transmission_line_km float64
+    thermal_power_plant_km float64
+    ts_km float64
+    big_market_km float64
+    market_shop_km float64
+    fitness_km float64
+    swim_pool_km float64
+    ice_rink_km float64
+    stadium_km float64
+    basketball_km float64
+    hospice_morgue_km float64
+    detention_facility_km float64
+    public_healthcare_km float64
+    university_km float64
+    workplaces_km float64
+    shopping_centers_km float64
+    office_km float64
+    additional_education_km float64
+    preschool_km float64
+    big_church_km float64
+    church_synagogue_km float64
+    mosque_km float64
+    theater_km float64
+    museum_km float64
+    exhibition_km float64
+    catering_km float64
+    ecology object
+    green_part_500 float64
+    prom_part_500 float64
+    office_count_500 int64
+    office_sqm_500 int64
+    trc_count_500 int64
+    trc_sqm_500 int64
+    cafe_count_500 int64
+    cafe_sum_500_min_price_avg float64
+    cafe_sum_500_max_price_avg float64
+    cafe_avg_price_500 float64
+    cafe_count_500_na_price int64
+    cafe_count_500_price_500 int64
+    cafe_count_500_price_1000 int64
+    cafe_count_500_price_1500 int64
+    cafe_count_500_price_2500 int64
+    cafe_count_500_price_4000 int64
+    cafe_count_500_price_high int64
+    big_church_count_500 int64
+    church_count_500 int64
+    mosque_count_500 int64
+    leisure_count_500 int64
+    sport_count_500 int64
+    market_count_500 int64
+    green_part_1000 float64
+    prom_part_1000 float64
+    office_count_1000 int64
+    office_sqm_1000 int64
+    trc_count_1000 int64
+    trc_sqm_1000 int64
+    cafe_count_1000 int64
+    cafe_sum_1000_min_price_avg float64
+    cafe_sum_1000_max_price_avg float64
+    cafe_avg_price_1000 float64
+    cafe_count_1000_na_price int64
+    cafe_count_1000_price_500 int64
+    cafe_count_1000_price_1000 int64
+    cafe_count_1000_price_1500 int64
+    cafe_count_1000_price_2500 int64
+    cafe_count_1000_price_4000 int64
+    cafe_count_1000_price_high int64
+    big_church_count_1000 int64
+    church_count_1000 int64
+    mosque_count_1000 int64
+    leisure_count_1000 int64
+    sport_count_1000 int64
+    market_count_1000 int64
+    green_part_1500 float64
+    prom_part_1500 float64
+    office_count_1500 int64
+    office_sqm_1500 int64
+    trc_count_1500 int64
+    trc_sqm_1500 int64
+    cafe_count_1500 int64
+    cafe_sum_1500_min_price_avg float64
+    cafe_sum_1500_max_price_avg float64
+    cafe_avg_price_1500 float64
+    cafe_count_1500_na_price int64
+    cafe_count_1500_price_500 int64
+    cafe_count_1500_price_1000 int64
+    cafe_count_1500_price_1500 int64
+    cafe_count_1500_price_2500 int64
+    cafe_count_1500_price_4000 int64
+    cafe_count_1500_price_high int64
+    big_church_count_1500 int64
+    church_count_1500 int64
+    mosque_count_1500 int64
+    leisure_count_1500 int64
+    sport_count_1500 int64
+    market_count_1500 int64
+    green_part_2000 float64
+    prom_part_2000 float64
+    office_count_2000 int64
+    office_sqm_2000 int64
+    trc_count_2000 int64
+    trc_sqm_2000 int64
+    cafe_count_2000 int64
+    cafe_sum_2000_min_price_avg float64
+    cafe_sum_2000_max_price_avg float64
+    cafe_avg_price_2000 float64
+    cafe_count_2000_na_price int64
+    cafe_count_2000_price_500 int64
+    cafe_count_2000_price_1000 int64
+    cafe_count_2000_price_1500 int64
+    cafe_count_2000_price_2500 int64
+    cafe_count_2000_price_4000 int64
+    cafe_count_2000_price_high int64
+    big_church_count_2000 int64
+    church_count_2000 int64
+    mosque_count_2000 int64
+    leisure_count_2000 int64
+    sport_count_2000 int64
+    market_count_2000 int64
+    green_part_3000 float64
+    prom_part_3000 float64
+    office_count_3000 int64
+    office_sqm_3000 int64
+    trc_count_3000 int64
+    trc_sqm_3000 int64
+    cafe_count_3000 int64
+    cafe_sum_3000_min_price_avg float64
+    cafe_sum_3000_max_price_avg float64
+    cafe_avg_price_3000 float64
+    cafe_count_3000_na_price int64
+    cafe_count_3000_price_500 int64
+    cafe_count_3000_price_1000 int64
+    cafe_count_3000_price_1500 int64
+    cafe_count_3000_price_2500 int64
+    cafe_count_3000_price_4000 int64
+    cafe_count_3000_price_high int64
+    big_church_count_3000 int64
+    church_count_3000 int64
+    mosque_count_3000 int64
+    leisure_count_3000 int64
+    sport_count_3000 int64
+    market_count_3000 int64
+    green_part_5000 float64
+    prom_part_5000 float64
+    office_count_5000 int64
+    office_sqm_5000 int64
+    trc_count_5000 int64
+    trc_sqm_5000 int64
+    cafe_count_5000 int64
+    cafe_sum_5000_min_price_avg float64
+    cafe_sum_5000_max_price_avg float64
+    cafe_avg_price_5000 float64
+    cafe_count_5000_na_price int64
+    cafe_count_5000_price_500 int64
+    cafe_count_5000_price_1000 int64
+    cafe_count_5000_price_1500 int64
+    cafe_count_5000_price_2500 int64
+    cafe_count_5000_price_4000 int64
+    cafe_count_5000_price_high int64
+    big_church_count_5000 int64
+    church_count_5000 int64
+    mosque_count_5000 int64
+    leisure_count_5000 int64
+    sport_count_5000 int64
+    market_count_5000 int64
+    price_doc int64
 
 
 **Question 7: Which variables are numerical variables (excluding 'id')? Put all the numerical variable in list.**
@@ -2284,24 +2453,20 @@ numerical[1: ]
 
 
 
+
+```python
+num_vars = list(df.dtypes[df.dtypes=='int64'].index) + list(df.dtypes[df.dtypes=='float64'].index)
+num_vars.remove('id')
+```
+
 **Question 8: Select the first 5 rows with 'id' (the 1st column) and 'price_doc' (the last column) columns from the data. **
 
 Hint: You can find out several ways to solve this question. 
 
 
 ```python
-df.ix[0:4, ['id', 'price_doc']]
+df[:5][['id','price_doc']]
 ```
-
-    /Users/lucydiamondsky/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:1: DeprecationWarning: 
-    .ix is deprecated. Please use
-    .loc for label based indexing or
-    .iloc for positional indexing
-    
-    See the documentation here:
-    http://pandas.pydata.org/pandas-docs/stable/indexing.html#ix-indexer-is-deprecated
-      """Entry point for launching an IPython kernel.
-
 
 
 
@@ -2366,6 +2531,7 @@ Hint: You can use boolean indexing or query. Try both methods.
 
 
 ```python
+df.query('full_sq>10 and full_sq<1500')
 df[(df['full_sq'] > 10) & (df['full_sq'] < 1500)]
 ```
 
@@ -3889,7 +4055,7 @@ df[(df['full_sq'] > 10) & (df['full_sq'] < 1500)]
 
 
 ```python
-df.loc[df['full_sq'] < df['life_sq'], 'life_sq'] = 'NaN'
+df.loc[df['full_sq'] < df['life_sq'], 'life_sq'] = np.NaN
 df
 ```
 
@@ -3943,7 +4109,7 @@ df
       <td>1</td>
       <td>2011-08-20</td>
       <td>43</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3967,7 +4133,7 @@ df
       <td>2</td>
       <td>2011-08-23</td>
       <td>34</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -3991,7 +4157,7 @@ df
       <td>3</td>
       <td>2011-08-27</td>
       <td>43</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>2.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4015,7 +4181,7 @@ df
       <td>4</td>
       <td>2011-09-01</td>
       <td>89</td>
-      <td>50</td>
+      <td>50.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4039,7 +4205,7 @@ df
       <td>5</td>
       <td>2011-09-05</td>
       <td>77</td>
-      <td>77</td>
+      <td>77.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4063,7 +4229,7 @@ df
       <td>6</td>
       <td>2011-09-06</td>
       <td>67</td>
-      <td>46</td>
+      <td>46.0</td>
       <td>14.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4087,7 +4253,7 @@ df
       <td>7</td>
       <td>2011-09-08</td>
       <td>25</td>
-      <td>14</td>
+      <td>14.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4111,7 +4277,7 @@ df
       <td>8</td>
       <td>2011-09-09</td>
       <td>44</td>
-      <td>44</td>
+      <td>44.0</td>
       <td>5.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4135,7 +4301,7 @@ df
       <td>9</td>
       <td>2011-09-10</td>
       <td>42</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>5.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4159,7 +4325,7 @@ df
       <td>10</td>
       <td>2011-09-13</td>
       <td>36</td>
-      <td>21</td>
+      <td>21.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4183,7 +4349,7 @@ df
       <td>11</td>
       <td>2011-09-16</td>
       <td>36</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>12.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4207,7 +4373,7 @@ df
       <td>12</td>
       <td>2011-09-16</td>
       <td>38</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>11.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4231,7 +4397,7 @@ df
       <td>13</td>
       <td>2011-09-17</td>
       <td>43</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4255,7 +4421,7 @@ df
       <td>14</td>
       <td>2011-09-19</td>
       <td>31</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4279,7 +4445,7 @@ df
       <td>15</td>
       <td>2011-09-19</td>
       <td>31</td>
-      <td>21</td>
+      <td>21.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4303,7 +4469,7 @@ df
       <td>16</td>
       <td>2011-09-20</td>
       <td>51</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>15.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4327,7 +4493,7 @@ df
       <td>17</td>
       <td>2011-09-20</td>
       <td>47</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4351,7 +4517,7 @@ df
       <td>18</td>
       <td>2011-09-20</td>
       <td>42</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>2.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4375,7 +4541,7 @@ df
       <td>19</td>
       <td>2011-09-22</td>
       <td>59</td>
-      <td>33</td>
+      <td>33.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4399,7 +4565,7 @@ df
       <td>20</td>
       <td>2011-09-22</td>
       <td>44</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4423,7 +4589,7 @@ df
       <td>21</td>
       <td>2011-09-22</td>
       <td>74</td>
-      <td>44</td>
+      <td>44.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4447,7 +4613,7 @@ df
       <td>22</td>
       <td>2011-09-22</td>
       <td>39</td>
-      <td>39</td>
+      <td>39.0</td>
       <td>7.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4471,7 +4637,7 @@ df
       <td>23</td>
       <td>2011-09-23</td>
       <td>48</td>
-      <td>34</td>
+      <td>34.0</td>
       <td>6.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4495,7 +4661,7 @@ df
       <td>24</td>
       <td>2011-09-23</td>
       <td>32</td>
-      <td>18</td>
+      <td>18.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4519,7 +4685,7 @@ df
       <td>25</td>
       <td>2011-09-23</td>
       <td>34</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>11.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4543,7 +4709,7 @@ df
       <td>26</td>
       <td>2011-09-24</td>
       <td>45</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4567,7 +4733,7 @@ df
       <td>27</td>
       <td>2011-09-26</td>
       <td>35</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4591,7 +4757,7 @@ df
       <td>28</td>
       <td>2011-09-26</td>
       <td>38</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>6.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4615,7 +4781,7 @@ df
       <td>29</td>
       <td>2011-09-26</td>
       <td>73</td>
-      <td>38</td>
+      <td>38.0</td>
       <td>15.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4639,7 +4805,7 @@ df
       <td>30</td>
       <td>2011-09-27</td>
       <td>42</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -4687,7 +4853,7 @@ df
       <td>30444</td>
       <td>2015-06-27</td>
       <td>113</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>26.0</td>
       <td>26.0</td>
       <td>1.0</td>
@@ -4711,7 +4877,7 @@ df
       <td>30445</td>
       <td>2015-06-27</td>
       <td>40</td>
-      <td>40</td>
+      <td>40.0</td>
       <td>2.0</td>
       <td>12.0</td>
       <td>4.0</td>
@@ -4783,7 +4949,7 @@ df
       <td>30448</td>
       <td>2015-06-27</td>
       <td>47</td>
-      <td>47</td>
+      <td>47.0</td>
       <td>19.0</td>
       <td>25.0</td>
       <td>1.0</td>
@@ -4807,7 +4973,7 @@ df
       <td>30449</td>
       <td>2015-06-27</td>
       <td>82</td>
-      <td>82</td>
+      <td>82.0</td>
       <td>8.0</td>
       <td>8.0</td>
       <td>6.0</td>
@@ -4879,7 +5045,7 @@ df
       <td>30452</td>
       <td>2015-06-27</td>
       <td>47</td>
-      <td>47</td>
+      <td>47.0</td>
       <td>7.0</td>
       <td>25.0</td>
       <td>1.0</td>
@@ -4951,7 +5117,7 @@ df
       <td>30455</td>
       <td>2015-06-29</td>
       <td>38</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>7.0</td>
       <td>17.0</td>
       <td>1.0</td>
@@ -4975,7 +5141,7 @@ df
       <td>30456</td>
       <td>2015-06-29</td>
       <td>45</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>6.0</td>
       <td>15.0</td>
       <td>6.0</td>
@@ -4999,7 +5165,7 @@ df
       <td>30457</td>
       <td>2015-06-29</td>
       <td>40</td>
-      <td>26</td>
+      <td>26.0</td>
       <td>3.0</td>
       <td>9.0</td>
       <td>2.0</td>
@@ -5023,7 +5189,7 @@ df
       <td>30458</td>
       <td>2015-06-29</td>
       <td>79</td>
-      <td>79</td>
+      <td>79.0</td>
       <td>3.0</td>
       <td>3.0</td>
       <td>1.0</td>
@@ -5047,7 +5213,7 @@ df
       <td>30459</td>
       <td>2015-06-29</td>
       <td>52</td>
-      <td>30</td>
+      <td>30.0</td>
       <td>8.0</td>
       <td>14.0</td>
       <td>1.0</td>
@@ -5071,7 +5237,7 @@ df
       <td>30460</td>
       <td>2015-06-29</td>
       <td>58</td>
-      <td>43</td>
+      <td>43.0</td>
       <td>7.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -5095,7 +5261,7 @@ df
       <td>30461</td>
       <td>2015-06-29</td>
       <td>50</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>7.0</td>
       <td>7.0</td>
       <td>1.0</td>
@@ -5143,7 +5309,7 @@ df
       <td>30463</td>
       <td>2015-06-29</td>
       <td>54</td>
-      <td>32</td>
+      <td>32.0</td>
       <td>8.0</td>
       <td>16.0</td>
       <td>1.0</td>
@@ -5167,7 +5333,7 @@ df
       <td>30464</td>
       <td>2015-06-30</td>
       <td>36</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>5.0</td>
       <td>16.0</td>
       <td>1.0</td>
@@ -5191,7 +5357,7 @@ df
       <td>30465</td>
       <td>2015-06-30</td>
       <td>47</td>
-      <td>30</td>
+      <td>30.0</td>
       <td>23.0</td>
       <td>25.0</td>
       <td>4.0</td>
@@ -5215,7 +5381,7 @@ df
       <td>30466</td>
       <td>2015-06-30</td>
       <td>56</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>13.0</td>
       <td>14.0</td>
       <td>1.0</td>
@@ -5239,7 +5405,7 @@ df
       <td>30467</td>
       <td>2015-06-30</td>
       <td>56</td>
-      <td>51</td>
+      <td>51.0</td>
       <td>19.0</td>
       <td>19.0</td>
       <td>1.0</td>
@@ -5287,7 +5453,7 @@ df
       <td>30469</td>
       <td>2015-06-30</td>
       <td>44</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>7.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -5311,7 +5477,7 @@ df
       <td>30470</td>
       <td>2015-06-30</td>
       <td>86</td>
-      <td>59</td>
+      <td>59.0</td>
       <td>3.0</td>
       <td>9.0</td>
       <td>2.0</td>
@@ -5359,7 +5525,7 @@ df
       <td>30472</td>
       <td>2015-06-30</td>
       <td>64</td>
-      <td>32</td>
+      <td>32.0</td>
       <td>5.0</td>
       <td>15.0</td>
       <td>1.0</td>
@@ -5383,7 +5549,7 @@ df
       <td>30473</td>
       <td>2015-06-30</td>
       <td>43</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>1.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -5409,79 +5575,25 @@ df
 
 
 
+
+```python
+sq_index = df.query('full_sq<life_sq').index
+df.loc[sq_index,'life_sq'] = np.NaN
+```
+
 ** Question 11: Check how many rows in life_sq are NAN? **
 
 
 ```python
-df.groupby('life_sq').size()
+df.life_sq.isnull().value_counts()
 ```
 
 
 
 
-    life_sq
-    0.0        45
-    1.0       390
-    7.0         1
-    8.0         7
-    9.0        15
-    10.0       22
-    11.0       47
-    12.0       44
-    13.0       66
-    14.0      219
-    15.0      170
-    16.0      282
-    17.0      699
-    18.0     1544
-    19.0     2138
-    20.0     1208
-    21.0      518
-    22.0      379
-    23.0      317
-    24.0      141
-    25.0      203
-    26.0      373
-    27.0      700
-    28.0     1067
-    29.0      804
-    30.0     1565
-    31.0      520
-    32.0      701
-    33.0      461
-    34.0      503
-             ... 
-    145.0       1
-    146.0       6
-    147.0       1
-    148.0       1
-    149.0       3
-    150.0       1
-    153.0       2
-    155.0       4
-    157.0       1
-    158.0       2
-    159.0       3
-    160.0       5
-    162.0       1
-    165.0       6
-    166.0       1
-    167.0       1
-    172.0       1
-    174.0       1
-    176.0       1
-    178.0       2
-    179.0       1
-    183.0       1
-    189.0       1
-    197.0       3
-    209.0       1
-    232.0       1
-    325.0       1
-    407.0       1
-    637.0       1
-    NaN        37
-    Length: 164, dtype: int64
+    False    24051
+    True      6420
+    Name: life_sq, dtype: int64
 
 
 
@@ -5566,7 +5678,7 @@ df.groupby('product_type').count()
       <td>19448</td>
       <td>19448</td>
       <td>19448</td>
-      <td>19447</td>
+      <td>19429</td>
       <td>19371</td>
       <td>13602</td>
       <td>13602</td>
@@ -5590,7 +5702,7 @@ df.groupby('product_type').count()
       <td>11023</td>
       <td>11023</td>
       <td>11023</td>
-      <td>4641</td>
+      <td>4622</td>
       <td>10933</td>
       <td>7297</td>
       <td>7297</td>
@@ -5613,6 +5725,20 @@ df.groupby('product_type').count()
 </table>
 <p>2 rows × 291 columns</p>
 </div>
+
+
+
+
+```python
+df.product_type.value_counts(normalize=True)
+```
+
+
+
+
+    Investment       0.638246
+    OwnerOccupier    0.361754
+    Name: product_type, dtype: float64
 
 
 
@@ -5703,7 +5829,7 @@ Hint: Use unstack() to turn the index values in state into column names.
 
 
 ```python
-grouped.unstack()
+grouped.unstack('state')
 ```
 
 
@@ -5726,40 +5852,37 @@ grouped.unstack()
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>product_type</th>
-      <th>Investment</th>
-      <th>OwnerOccupier</th>
+      <th>state</th>
+      <th>1.0</th>
+      <th>2.0</th>
+      <th>3.0</th>
+      <th>4.0</th>
+      <th>33.0</th>
     </tr>
     <tr>
-      <th>state</th>
+      <th>product_type</th>
+      <th></th>
+      <th></th>
+      <th></th>
       <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>1.0</th>
+      <th>Investment</th>
       <td>520.0</td>
-      <td>4335.0</td>
-    </tr>
-    <tr>
-      <th>2.0</th>
       <td>5802.0</td>
-      <td>42.0</td>
-    </tr>
-    <tr>
-      <th>3.0</th>
       <td>5653.0</td>
-      <td>137.0</td>
-    </tr>
-    <tr>
-      <th>4.0</th>
       <td>413.0</td>
-      <td>9.0</td>
+      <td>1.0</td>
     </tr>
     <tr>
-      <th>33.0</th>
-      <td>1.0</td>
+      <th>OwnerOccupier</th>
+      <td>4335.0</td>
+      <td>42.0</td>
+      <td>137.0</td>
+      <td>9.0</td>
       <td>NaN</td>
     </tr>
   </tbody>
@@ -5827,7 +5950,7 @@ df
       <td>1</td>
       <td>2011-08-20</td>
       <td>43</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -5851,7 +5974,7 @@ df
       <td>2</td>
       <td>2011-08-23</td>
       <td>34</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -5875,7 +5998,7 @@ df
       <td>3</td>
       <td>2011-08-27</td>
       <td>43</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>2.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -5899,7 +6022,7 @@ df
       <td>4</td>
       <td>2011-09-01</td>
       <td>89</td>
-      <td>50</td>
+      <td>50.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -5923,7 +6046,7 @@ df
       <td>5</td>
       <td>2011-09-05</td>
       <td>77</td>
-      <td>77</td>
+      <td>77.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -5947,7 +6070,7 @@ df
       <td>6</td>
       <td>2011-09-06</td>
       <td>67</td>
-      <td>46</td>
+      <td>46.0</td>
       <td>14.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -5971,7 +6094,7 @@ df
       <td>7</td>
       <td>2011-09-08</td>
       <td>25</td>
-      <td>14</td>
+      <td>14.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -5995,7 +6118,7 @@ df
       <td>8</td>
       <td>2011-09-09</td>
       <td>44</td>
-      <td>44</td>
+      <td>44.0</td>
       <td>5.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6019,7 +6142,7 @@ df
       <td>9</td>
       <td>2011-09-10</td>
       <td>42</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>5.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6043,7 +6166,7 @@ df
       <td>10</td>
       <td>2011-09-13</td>
       <td>36</td>
-      <td>21</td>
+      <td>21.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6067,7 +6190,7 @@ df
       <td>11</td>
       <td>2011-09-16</td>
       <td>36</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>12.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6091,7 +6214,7 @@ df
       <td>12</td>
       <td>2011-09-16</td>
       <td>38</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>11.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6115,7 +6238,7 @@ df
       <td>13</td>
       <td>2011-09-17</td>
       <td>43</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6139,7 +6262,7 @@ df
       <td>14</td>
       <td>2011-09-19</td>
       <td>31</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6163,7 +6286,7 @@ df
       <td>15</td>
       <td>2011-09-19</td>
       <td>31</td>
-      <td>21</td>
+      <td>21.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6187,7 +6310,7 @@ df
       <td>16</td>
       <td>2011-09-20</td>
       <td>51</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>15.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6211,7 +6334,7 @@ df
       <td>17</td>
       <td>2011-09-20</td>
       <td>47</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6235,7 +6358,7 @@ df
       <td>18</td>
       <td>2011-09-20</td>
       <td>42</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>2.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6259,7 +6382,7 @@ df
       <td>19</td>
       <td>2011-09-22</td>
       <td>59</td>
-      <td>33</td>
+      <td>33.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6283,7 +6406,7 @@ df
       <td>20</td>
       <td>2011-09-22</td>
       <td>44</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6307,7 +6430,7 @@ df
       <td>21</td>
       <td>2011-09-22</td>
       <td>74</td>
-      <td>44</td>
+      <td>44.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6331,7 +6454,7 @@ df
       <td>22</td>
       <td>2011-09-22</td>
       <td>39</td>
-      <td>39</td>
+      <td>39.0</td>
       <td>7.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6355,7 +6478,7 @@ df
       <td>23</td>
       <td>2011-09-23</td>
       <td>48</td>
-      <td>34</td>
+      <td>34.0</td>
       <td>6.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6379,7 +6502,7 @@ df
       <td>24</td>
       <td>2011-09-23</td>
       <td>32</td>
-      <td>18</td>
+      <td>18.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6403,7 +6526,7 @@ df
       <td>25</td>
       <td>2011-09-23</td>
       <td>34</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>11.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6427,7 +6550,7 @@ df
       <td>26</td>
       <td>2011-09-24</td>
       <td>45</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6451,7 +6574,7 @@ df
       <td>27</td>
       <td>2011-09-26</td>
       <td>35</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6475,7 +6598,7 @@ df
       <td>28</td>
       <td>2011-09-26</td>
       <td>38</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>6.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6499,7 +6622,7 @@ df
       <td>29</td>
       <td>2011-09-26</td>
       <td>73</td>
-      <td>38</td>
+      <td>38.0</td>
       <td>15.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6523,7 +6646,7 @@ df
       <td>30</td>
       <td>2011-09-27</td>
       <td>42</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -6571,7 +6694,7 @@ df
       <td>30444</td>
       <td>2015-06-27</td>
       <td>113</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>26.0</td>
       <td>26.0</td>
       <td>1.0</td>
@@ -6595,7 +6718,7 @@ df
       <td>30445</td>
       <td>2015-06-27</td>
       <td>40</td>
-      <td>40</td>
+      <td>40.0</td>
       <td>2.0</td>
       <td>12.0</td>
       <td>4.0</td>
@@ -6667,7 +6790,7 @@ df
       <td>30448</td>
       <td>2015-06-27</td>
       <td>47</td>
-      <td>47</td>
+      <td>47.0</td>
       <td>19.0</td>
       <td>25.0</td>
       <td>1.0</td>
@@ -6691,7 +6814,7 @@ df
       <td>30449</td>
       <td>2015-06-27</td>
       <td>82</td>
-      <td>82</td>
+      <td>82.0</td>
       <td>8.0</td>
       <td>8.0</td>
       <td>6.0</td>
@@ -6763,7 +6886,7 @@ df
       <td>30452</td>
       <td>2015-06-27</td>
       <td>47</td>
-      <td>47</td>
+      <td>47.0</td>
       <td>7.0</td>
       <td>25.0</td>
       <td>1.0</td>
@@ -6835,7 +6958,7 @@ df
       <td>30455</td>
       <td>2015-06-29</td>
       <td>38</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>7.0</td>
       <td>17.0</td>
       <td>1.0</td>
@@ -6859,7 +6982,7 @@ df
       <td>30456</td>
       <td>2015-06-29</td>
       <td>45</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>6.0</td>
       <td>15.0</td>
       <td>6.0</td>
@@ -6883,7 +7006,7 @@ df
       <td>30457</td>
       <td>2015-06-29</td>
       <td>40</td>
-      <td>26</td>
+      <td>26.0</td>
       <td>3.0</td>
       <td>9.0</td>
       <td>2.0</td>
@@ -6907,7 +7030,7 @@ df
       <td>30458</td>
       <td>2015-06-29</td>
       <td>79</td>
-      <td>79</td>
+      <td>79.0</td>
       <td>3.0</td>
       <td>3.0</td>
       <td>1.0</td>
@@ -6931,7 +7054,7 @@ df
       <td>30459</td>
       <td>2015-06-29</td>
       <td>52</td>
-      <td>30</td>
+      <td>30.0</td>
       <td>8.0</td>
       <td>14.0</td>
       <td>1.0</td>
@@ -6955,7 +7078,7 @@ df
       <td>30460</td>
       <td>2015-06-29</td>
       <td>58</td>
-      <td>43</td>
+      <td>43.0</td>
       <td>7.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -6979,7 +7102,7 @@ df
       <td>30461</td>
       <td>2015-06-29</td>
       <td>50</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>7.0</td>
       <td>7.0</td>
       <td>1.0</td>
@@ -7027,7 +7150,7 @@ df
       <td>30463</td>
       <td>2015-06-29</td>
       <td>54</td>
-      <td>32</td>
+      <td>32.0</td>
       <td>8.0</td>
       <td>16.0</td>
       <td>1.0</td>
@@ -7051,7 +7174,7 @@ df
       <td>30464</td>
       <td>2015-06-30</td>
       <td>36</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>5.0</td>
       <td>16.0</td>
       <td>1.0</td>
@@ -7075,7 +7198,7 @@ df
       <td>30465</td>
       <td>2015-06-30</td>
       <td>47</td>
-      <td>30</td>
+      <td>30.0</td>
       <td>23.0</td>
       <td>25.0</td>
       <td>4.0</td>
@@ -7099,7 +7222,7 @@ df
       <td>30466</td>
       <td>2015-06-30</td>
       <td>56</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>13.0</td>
       <td>14.0</td>
       <td>1.0</td>
@@ -7123,7 +7246,7 @@ df
       <td>30467</td>
       <td>2015-06-30</td>
       <td>56</td>
-      <td>51</td>
+      <td>51.0</td>
       <td>19.0</td>
       <td>19.0</td>
       <td>1.0</td>
@@ -7171,7 +7294,7 @@ df
       <td>30469</td>
       <td>2015-06-30</td>
       <td>44</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>7.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -7195,7 +7318,7 @@ df
       <td>30470</td>
       <td>2015-06-30</td>
       <td>86</td>
-      <td>59</td>
+      <td>59.0</td>
       <td>3.0</td>
       <td>9.0</td>
       <td>2.0</td>
@@ -7243,7 +7366,7 @@ df
       <td>30472</td>
       <td>2015-06-30</td>
       <td>64</td>
-      <td>32</td>
+      <td>32.0</td>
       <td>5.0</td>
       <td>15.0</td>
       <td>1.0</td>
@@ -7267,7 +7390,7 @@ df
       <td>30473</td>
       <td>2015-06-30</td>
       <td>43</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>1.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -7293,9 +7416,167 @@ df
 
 
 
+
+```python
+df[['life_sq','num_room']].apply(lambda x:x[0]/x[1],axis=1)
+```
+
+    /Users/lucydiamondsky/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:1: RuntimeWarning: invalid value encountered in double_scalars
+      """Entry point for launching an IPython kernel.
+    /Users/lucydiamondsky/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:1: RuntimeWarning: divide by zero encountered in double_scalars
+      """Entry point for launching an IPython kernel.
+
+
+
+
+
+    0              NaN
+    1              NaN
+    2              NaN
+    3              NaN
+    4              NaN
+    5              NaN
+    6              NaN
+    7              NaN
+    8              NaN
+    9              NaN
+    10             NaN
+    11             NaN
+    12             NaN
+    13             NaN
+    14             NaN
+    15             NaN
+    16             NaN
+    17             NaN
+    18             NaN
+    19             NaN
+    20             NaN
+    21             NaN
+    22             NaN
+    23             NaN
+    24             NaN
+    25             NaN
+    26             NaN
+    27             NaN
+    28             NaN
+    29             NaN
+               ...    
+    30441     0.250000
+    30442    40.000000
+    30443          NaN
+    30444          NaN
+    30445    47.000000
+    30446    41.000000
+    30447          NaN
+    30448          NaN
+    30449    47.000000
+    30450          NaN
+    30451          NaN
+    30452    19.000000
+    30453     1.000000
+    30454    13.000000
+    30455    26.333333
+    30456    15.000000
+    30457    14.333333
+    30458     1.000000
+    30459          NaN
+    30460    16.000000
+    30461    19.000000
+    30462    30.000000
+    30463    14.500000
+    30464    25.500000
+    30465          NaN
+    30466    13.500000
+    30467    14.750000
+    30468          NaN
+    30469    16.000000
+    30470    14.000000
+    Length: 30471, dtype: float64
+
+
+
 **Quesion 17: Change the format of timestamp to '%Y-%m-%d'. **
 
 Hint: For more info about timestamp in pandas, read [this document](https://pandas.pydata.org/pandas-docs/stable/timeseries.html). 
+
+
+```python
+df['timestamp'] = pd.to_datetime(df.timestamp)
+df['ts_year'] = df['timestamp'].dt.year 
+df['ts_dayofweek'] = df['timestamp'].dt.weekday_name
+
+df18 = df.loc[0:5,['timestamp','ts_year','ts_dayofweek']]
+df18
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>timestamp</th>
+      <th>ts_year</th>
+      <th>ts_dayofweek</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2011-08-20</td>
+      <td>2011</td>
+      <td>Saturday</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2011-08-23</td>
+      <td>2011</td>
+      <td>Tuesday</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2011-08-27</td>
+      <td>2011</td>
+      <td>Saturday</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2011-09-01</td>
+      <td>2011</td>
+      <td>Thursday</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2011-09-05</td>
+      <td>2011</td>
+      <td>Monday</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2011-09-06</td>
+      <td>2011</td>
+      <td>Tuesday</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
@@ -7335,8 +7616,6 @@ df
       <th>num_room</th>
       <th>kitch_sq</th>
       <th>...</th>
-      <th>cafe_count_5000_price_4000</th>
-      <th>cafe_count_5000_price_high</th>
       <th>big_church_count_5000</th>
       <th>church_count_5000</th>
       <th>mosque_count_5000</th>
@@ -7345,6 +7624,8 @@ df
       <th>market_count_5000</th>
       <th>price_doc</th>
       <th>room_size</th>
+      <th>ts_year</th>
+      <th>ts_dayofweek</th>
     </tr>
   </thead>
   <tbody>
@@ -7353,7 +7634,7 @@ df
       <td>1</td>
       <td>2011-08-20</td>
       <td>43</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7361,8 +7642,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>4</td>
-      <td>0</td>
       <td>13</td>
       <td>22</td>
       <td>1</td>
@@ -7371,13 +7650,15 @@ df
       <td>4</td>
       <td>5850000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2</td>
       <td>2011-08-23</td>
       <td>34</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7385,8 +7666,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>15</td>
       <td>29</td>
       <td>1</td>
@@ -7395,13 +7674,15 @@ df
       <td>14</td>
       <td>6000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>2</th>
       <td>3</td>
       <td>2011-08-27</td>
       <td>43</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>2.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7409,8 +7690,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>11</td>
       <td>27</td>
       <td>0</td>
@@ -7419,13 +7698,15 @@ df
       <td>10</td>
       <td>5700000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>3</th>
       <td>4</td>
       <td>2011-09-01</td>
       <td>89</td>
-      <td>50</td>
+      <td>50.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7433,8 +7714,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>2</td>
-      <td>1</td>
       <td>4</td>
       <td>4</td>
       <td>0</td>
@@ -7443,13 +7722,15 @@ df
       <td>3</td>
       <td>13100000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Thursday</td>
     </tr>
     <tr>
       <th>4</th>
       <td>5</td>
       <td>2011-09-05</td>
       <td>77</td>
-      <td>77</td>
+      <td>77.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7457,8 +7738,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>108</td>
-      <td>17</td>
       <td>135</td>
       <td>236</td>
       <td>2</td>
@@ -7467,13 +7746,15 @@ df
       <td>14</td>
       <td>16331452</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>5</th>
       <td>6</td>
       <td>2011-09-06</td>
       <td>67</td>
-      <td>46</td>
+      <td>46.0</td>
       <td>14.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7481,8 +7762,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>14</td>
-      <td>1</td>
       <td>53</td>
       <td>78</td>
       <td>1</td>
@@ -7491,13 +7770,15 @@ df
       <td>17</td>
       <td>9100000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>6</th>
       <td>7</td>
       <td>2011-09-08</td>
       <td>25</td>
-      <td>14</td>
+      <td>14.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7505,8 +7786,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>16</td>
-      <td>3</td>
       <td>38</td>
       <td>80</td>
       <td>1</td>
@@ -7515,13 +7794,15 @@ df
       <td>8</td>
       <td>5500000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Thursday</td>
     </tr>
     <tr>
       <th>7</th>
       <td>8</td>
       <td>2011-09-09</td>
       <td>44</td>
-      <td>44</td>
+      <td>44.0</td>
       <td>5.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7529,8 +7810,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>4</td>
-      <td>0</td>
       <td>11</td>
       <td>18</td>
       <td>1</td>
@@ -7539,13 +7818,15 @@ df
       <td>4</td>
       <td>2000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Friday</td>
     </tr>
     <tr>
       <th>8</th>
       <td>9</td>
       <td>2011-09-10</td>
       <td>42</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>5.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7553,8 +7834,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>8</td>
-      <td>1</td>
       <td>18</td>
       <td>34</td>
       <td>1</td>
@@ -7563,13 +7842,15 @@ df
       <td>11</td>
       <td>5300000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>9</th>
       <td>10</td>
       <td>2011-09-13</td>
       <td>36</td>
-      <td>21</td>
+      <td>21.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7577,8 +7858,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>13</td>
-      <td>0</td>
       <td>10</td>
       <td>20</td>
       <td>1</td>
@@ -7587,13 +7866,15 @@ df
       <td>1</td>
       <td>2000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>10</th>
       <td>11</td>
       <td>2011-09-16</td>
       <td>36</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>12.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7601,8 +7882,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>5</td>
       <td>9</td>
       <td>0</td>
@@ -7611,13 +7890,15 @@ df
       <td>6</td>
       <td>4650000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Friday</td>
     </tr>
     <tr>
       <th>11</th>
       <td>12</td>
       <td>2011-09-16</td>
       <td>38</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>11.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7625,8 +7906,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>10</td>
       <td>9</td>
       <td>0</td>
@@ -7635,13 +7914,15 @@ df
       <td>4</td>
       <td>4800000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Friday</td>
     </tr>
     <tr>
       <th>12</th>
       <td>13</td>
       <td>2011-09-17</td>
       <td>43</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7649,8 +7930,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>9</td>
-      <td>1</td>
       <td>7</td>
       <td>15</td>
       <td>0</td>
@@ -7659,13 +7938,15 @@ df
       <td>0</td>
       <td>5100000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>13</th>
       <td>14</td>
       <td>2011-09-19</td>
       <td>31</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7673,8 +7954,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>108</td>
-      <td>22</td>
       <td>57</td>
       <td>102</td>
       <td>1</td>
@@ -7683,13 +7962,15 @@ df
       <td>7</td>
       <td>5200000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>14</th>
       <td>15</td>
       <td>2011-09-19</td>
       <td>31</td>
-      <td>21</td>
+      <td>21.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7697,8 +7978,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>19</td>
-      <td>2</td>
       <td>63</td>
       <td>100</td>
       <td>0</td>
@@ -7707,13 +7986,15 @@ df
       <td>14</td>
       <td>5000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>15</th>
       <td>16</td>
       <td>2011-09-20</td>
       <td>51</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>15.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7721,8 +8002,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>9</td>
       <td>21</td>
       <td>0</td>
@@ -7731,13 +8010,15 @@ df
       <td>9</td>
       <td>1850000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>16</th>
       <td>17</td>
       <td>2011-09-20</td>
       <td>47</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7745,8 +8026,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>7</td>
       <td>23</td>
       <td>0</td>
@@ -7755,13 +8034,15 @@ df
       <td>13</td>
       <td>6300000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>17</th>
       <td>18</td>
       <td>2011-09-20</td>
       <td>42</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>2.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7769,8 +8050,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>6</td>
-      <td>0</td>
       <td>13</td>
       <td>33</td>
       <td>1</td>
@@ -7779,13 +8058,15 @@ df
       <td>12</td>
       <td>5900000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>18</th>
       <td>19</td>
       <td>2011-09-22</td>
       <td>59</td>
-      <td>33</td>
+      <td>33.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7793,8 +8074,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>6</td>
       <td>9</td>
       <td>0</td>
@@ -7803,13 +8082,15 @@ df
       <td>6</td>
       <td>7900000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Thursday</td>
     </tr>
     <tr>
       <th>19</th>
       <td>20</td>
       <td>2011-09-22</td>
       <td>44</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7817,8 +8098,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>10</td>
       <td>14</td>
       <td>0</td>
@@ -7827,13 +8106,15 @@ df
       <td>5</td>
       <td>5200000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Thursday</td>
     </tr>
     <tr>
       <th>20</th>
       <td>21</td>
       <td>2011-09-22</td>
       <td>74</td>
-      <td>44</td>
+      <td>44.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7841,8 +8122,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>5</td>
       <td>0</td>
@@ -7851,13 +8130,15 @@ df
       <td>0</td>
       <td>8200000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Thursday</td>
     </tr>
     <tr>
       <th>21</th>
       <td>22</td>
       <td>2011-09-22</td>
       <td>39</td>
-      <td>39</td>
+      <td>39.0</td>
       <td>7.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7865,8 +8146,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>12</td>
       <td>14</td>
       <td>0</td>
@@ -7875,13 +8154,15 @@ df
       <td>9</td>
       <td>5200000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Thursday</td>
     </tr>
     <tr>
       <th>22</th>
       <td>23</td>
       <td>2011-09-23</td>
       <td>48</td>
-      <td>34</td>
+      <td>34.0</td>
       <td>6.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7889,8 +8170,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>4</td>
-      <td>1</td>
       <td>11</td>
       <td>10</td>
       <td>0</td>
@@ -7899,13 +8178,15 @@ df
       <td>8</td>
       <td>6250000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Friday</td>
     </tr>
     <tr>
       <th>23</th>
       <td>24</td>
       <td>2011-09-23</td>
       <td>32</td>
-      <td>18</td>
+      <td>18.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7913,8 +8194,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>7</td>
       <td>21</td>
       <td>1</td>
@@ -7923,13 +8202,15 @@ df
       <td>13</td>
       <td>5750000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Friday</td>
     </tr>
     <tr>
       <th>24</th>
       <td>25</td>
       <td>2011-09-23</td>
       <td>34</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>11.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7937,8 +8218,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>4</td>
-      <td>1</td>
       <td>8</td>
       <td>9</td>
       <td>0</td>
@@ -7947,13 +8226,15 @@ df
       <td>8</td>
       <td>6000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Friday</td>
     </tr>
     <tr>
       <th>25</th>
       <td>26</td>
       <td>2011-09-24</td>
       <td>45</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7961,8 +8242,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>15</td>
-      <td>1</td>
       <td>11</td>
       <td>23</td>
       <td>1</td>
@@ -7971,13 +8250,15 @@ df
       <td>1</td>
       <td>1050000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>26</th>
       <td>27</td>
       <td>2011-09-26</td>
       <td>35</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -7985,8 +8266,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>5</td>
-      <td>0</td>
       <td>13</td>
       <td>25</td>
       <td>1</td>
@@ -7995,13 +8274,15 @@ df
       <td>4</td>
       <td>5000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>27</th>
       <td>28</td>
       <td>2011-09-26</td>
       <td>38</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>6.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -8009,8 +8290,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>2</td>
       <td>10</td>
       <td>0</td>
@@ -8019,13 +8298,15 @@ df
       <td>2</td>
       <td>4700000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>28</th>
       <td>29</td>
       <td>2011-09-26</td>
       <td>73</td>
-      <td>38</td>
+      <td>38.0</td>
       <td>15.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -8033,8 +8314,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>17</td>
       <td>35</td>
       <td>0</td>
@@ -8043,13 +8322,15 @@ df
       <td>7</td>
       <td>8254400</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>29</th>
       <td>30</td>
       <td>2011-09-27</td>
       <td>42</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -8057,8 +8338,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>12</td>
       <td>17</td>
       <td>0</td>
@@ -8067,6 +8346,8 @@ df
       <td>5</td>
       <td>5900000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>...</th>
@@ -8097,7 +8378,7 @@ df
       <td>30444</td>
       <td>2015-06-27</td>
       <td>113</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>26.0</td>
       <td>26.0</td>
       <td>1.0</td>
@@ -8105,8 +8386,6 @@ df
       <td>4.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>141</td>
-      <td>26</td>
       <td>150</td>
       <td>249</td>
       <td>2</td>
@@ -8115,13 +8394,15 @@ df
       <td>13</td>
       <td>25039300</td>
       <td>0.250000</td>
+      <td>2015</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>30442</th>
       <td>30445</td>
       <td>2015-06-27</td>
       <td>40</td>
-      <td>40</td>
+      <td>40.0</td>
       <td>2.0</td>
       <td>12.0</td>
       <td>4.0</td>
@@ -8129,8 +8410,6 @@ df
       <td>1.0</td>
       <td>10.0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>7</td>
       <td>1</td>
@@ -8139,6 +8418,8 @@ df
       <td>1</td>
       <td>4350000</td>
       <td>40.000000</td>
+      <td>2015</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>30443</th>
@@ -8153,8 +8434,6 @@ df
       <td>3.0</td>
       <td>79.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>5</td>
       <td>14</td>
       <td>0</td>
@@ -8163,6 +8442,8 @@ df
       <td>2</td>
       <td>7567425</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>30444</th>
@@ -8177,8 +8458,6 @@ df
       <td>3.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>4</td>
-      <td>1</td>
       <td>5</td>
       <td>7</td>
       <td>0</td>
@@ -8187,13 +8466,15 @@ df
       <td>5</td>
       <td>11438948</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>30445</th>
       <td>30448</td>
       <td>2015-06-27</td>
       <td>47</td>
-      <td>47</td>
+      <td>47.0</td>
       <td>19.0</td>
       <td>25.0</td>
       <td>1.0</td>
@@ -8201,8 +8482,6 @@ df
       <td>1.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>57</td>
-      <td>12</td>
       <td>23</td>
       <td>42</td>
       <td>1</td>
@@ -8211,13 +8490,15 @@ df
       <td>7</td>
       <td>10139368</td>
       <td>47.000000</td>
+      <td>2015</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>30446</th>
       <td>30449</td>
       <td>2015-06-27</td>
       <td>82</td>
-      <td>82</td>
+      <td>82.0</td>
       <td>8.0</td>
       <td>8.0</td>
       <td>6.0</td>
@@ -8226,8 +8507,6 @@ df
       <td>1.0</td>
       <td>...</td>
       <td>2</td>
-      <td>0</td>
-      <td>2</td>
       <td>9</td>
       <td>0</td>
       <td>0</td>
@@ -8235,6 +8514,8 @@ df
       <td>2</td>
       <td>6125400</td>
       <td>41.000000</td>
+      <td>2015</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>30447</th>
@@ -8249,8 +8530,6 @@ df
       <td>2.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>5</td>
       <td>14</td>
       <td>0</td>
@@ -8259,6 +8538,8 @@ df
       <td>2</td>
       <td>6373324</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>30448</th>
@@ -8273,8 +8554,6 @@ df
       <td>3.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>7</td>
       <td>0</td>
@@ -8283,13 +8562,15 @@ df
       <td>0</td>
       <td>6888144</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>30449</th>
       <td>30452</td>
       <td>2015-06-27</td>
       <td>47</td>
-      <td>47</td>
+      <td>47.0</td>
       <td>7.0</td>
       <td>25.0</td>
       <td>1.0</td>
@@ -8297,8 +8578,6 @@ df
       <td>1.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>57</td>
-      <td>12</td>
       <td>23</td>
       <td>42</td>
       <td>1</td>
@@ -8307,6 +8586,8 @@ df
       <td>7</td>
       <td>9227657</td>
       <td>47.000000</td>
+      <td>2015</td>
+      <td>Saturday</td>
     </tr>
     <tr>
       <th>30450</th>
@@ -8321,8 +8602,6 @@ df
       <td>2.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>4</td>
-      <td>0</td>
       <td>13</td>
       <td>28</td>
       <td>1</td>
@@ -8331,6 +8610,8 @@ df
       <td>5</td>
       <td>12610000</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30451</th>
@@ -8351,17 +8632,17 @@ df
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>2394300</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30452</th>
       <td>30455</td>
       <td>2015-06-29</td>
       <td>38</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>7.0</td>
       <td>17.0</td>
       <td>1.0</td>
@@ -8369,8 +8650,6 @@ df
       <td>1.0</td>
       <td>7.0</td>
       <td>...</td>
-      <td>12</td>
-      <td>0</td>
       <td>8</td>
       <td>23</td>
       <td>1</td>
@@ -8379,13 +8658,15 @@ df
       <td>2</td>
       <td>6800000</td>
       <td>19.000000</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30453</th>
       <td>30456</td>
       <td>2015-06-29</td>
       <td>45</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>6.0</td>
       <td>15.0</td>
       <td>6.0</td>
@@ -8393,8 +8674,6 @@ df
       <td>1.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>3</td>
       <td>8</td>
       <td>1</td>
@@ -8403,13 +8682,15 @@ df
       <td>3</td>
       <td>4066740</td>
       <td>1.000000</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30454</th>
       <td>30457</td>
       <td>2015-06-29</td>
       <td>40</td>
-      <td>26</td>
+      <td>26.0</td>
       <td>3.0</td>
       <td>9.0</td>
       <td>2.0</td>
@@ -8417,8 +8698,6 @@ df
       <td>2.0</td>
       <td>5.0</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>17</td>
       <td>29</td>
       <td>0</td>
@@ -8427,13 +8706,15 @@ df
       <td>4</td>
       <td>6300000</td>
       <td>13.000000</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30455</th>
       <td>30458</td>
       <td>2015-06-29</td>
       <td>79</td>
-      <td>79</td>
+      <td>79.0</td>
       <td>3.0</td>
       <td>3.0</td>
       <td>1.0</td>
@@ -8441,8 +8722,6 @@ df
       <td>3.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>2</td>
       <td>12</td>
       <td>0</td>
@@ -8451,13 +8730,15 @@ df
       <td>0</td>
       <td>9014972</td>
       <td>26.333333</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30456</th>
       <td>30459</td>
       <td>2015-06-29</td>
       <td>52</td>
-      <td>30</td>
+      <td>30.0</td>
       <td>8.0</td>
       <td>14.0</td>
       <td>1.0</td>
@@ -8465,8 +8746,6 @@ df
       <td>2.0</td>
       <td>8.0</td>
       <td>...</td>
-      <td>4</td>
-      <td>1</td>
       <td>5</td>
       <td>7</td>
       <td>0</td>
@@ -8475,13 +8754,15 @@ df
       <td>6</td>
       <td>1000000</td>
       <td>15.000000</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30457</th>
       <td>30460</td>
       <td>2015-06-29</td>
       <td>58</td>
-      <td>43</td>
+      <td>43.0</td>
       <td>7.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -8489,8 +8770,6 @@ df
       <td>3.0</td>
       <td>6.0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>8</td>
       <td>7</td>
       <td>1</td>
@@ -8499,13 +8778,15 @@ df
       <td>1</td>
       <td>7800000</td>
       <td>14.333333</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30458</th>
       <td>30461</td>
       <td>2015-06-29</td>
       <td>50</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>7.0</td>
       <td>7.0</td>
       <td>1.0</td>
@@ -8513,8 +8794,6 @@ df
       <td>1.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>5</td>
       <td>15</td>
       <td>0</td>
@@ -8523,6 +8802,8 @@ df
       <td>3</td>
       <td>6370777</td>
       <td>1.000000</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30459</th>
@@ -8537,8 +8818,6 @@ df
       <td>2.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>5</td>
       <td>14</td>
       <td>0</td>
@@ -8547,13 +8826,15 @@ df
       <td>2</td>
       <td>5778893</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30460</th>
       <td>30463</td>
       <td>2015-06-29</td>
       <td>54</td>
-      <td>32</td>
+      <td>32.0</td>
       <td>8.0</td>
       <td>16.0</td>
       <td>1.0</td>
@@ -8561,8 +8842,6 @@ df
       <td>2.0</td>
       <td>9.0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>6</td>
       <td>25</td>
       <td>0</td>
@@ -8571,13 +8850,15 @@ df
       <td>8</td>
       <td>9500000</td>
       <td>16.000000</td>
+      <td>2015</td>
+      <td>Monday</td>
     </tr>
     <tr>
       <th>30461</th>
       <td>30464</td>
       <td>2015-06-30</td>
       <td>36</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>5.0</td>
       <td>16.0</td>
       <td>1.0</td>
@@ -8586,8 +8867,6 @@ df
       <td>8.0</td>
       <td>...</td>
       <td>4</td>
-      <td>1</td>
-      <td>4</td>
       <td>35</td>
       <td>1</td>
       <td>6</td>
@@ -8595,13 +8874,15 @@ df
       <td>6</td>
       <td>5000000</td>
       <td>19.000000</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>30462</th>
       <td>30465</td>
       <td>2015-06-30</td>
       <td>47</td>
-      <td>30</td>
+      <td>30.0</td>
       <td>23.0</td>
       <td>25.0</td>
       <td>4.0</td>
@@ -8609,8 +8890,6 @@ df
       <td>1.0</td>
       <td>10.0</td>
       <td>...</td>
-      <td>57</td>
-      <td>12</td>
       <td>23</td>
       <td>42</td>
       <td>1</td>
@@ -8619,13 +8898,15 @@ df
       <td>7</td>
       <td>10544070</td>
       <td>30.000000</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>30463</th>
       <td>30466</td>
       <td>2015-06-30</td>
       <td>56</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>13.0</td>
       <td>14.0</td>
       <td>1.0</td>
@@ -8633,8 +8914,6 @@ df
       <td>2.0</td>
       <td>11.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>13</td>
       <td>12</td>
       <td>0</td>
@@ -8643,13 +8922,15 @@ df
       <td>6</td>
       <td>12000000</td>
       <td>14.500000</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>30464</th>
       <td>30467</td>
       <td>2015-06-30</td>
       <td>56</td>
-      <td>51</td>
+      <td>51.0</td>
       <td>19.0</td>
       <td>19.0</td>
       <td>1.0</td>
@@ -8657,8 +8938,6 @@ df
       <td>2.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>14</td>
       <td>29</td>
       <td>1</td>
@@ -8667,6 +8946,8 @@ df
       <td>6</td>
       <td>10262010</td>
       <td>25.500000</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>30465</th>
@@ -8681,8 +8962,6 @@ df
       <td>2.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>141</td>
-      <td>26</td>
       <td>150</td>
       <td>249</td>
       <td>2</td>
@@ -8691,13 +8970,15 @@ df
       <td>13</td>
       <td>6750554</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>30466</th>
       <td>30469</td>
       <td>2015-06-30</td>
       <td>44</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>7.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -8705,8 +8986,6 @@ df
       <td>2.0</td>
       <td>6.0</td>
       <td>...</td>
-      <td>5</td>
-      <td>0</td>
       <td>15</td>
       <td>26</td>
       <td>1</td>
@@ -8715,13 +8994,15 @@ df
       <td>6</td>
       <td>7400000</td>
       <td>13.500000</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>30467</th>
       <td>30470</td>
       <td>2015-06-30</td>
       <td>86</td>
-      <td>59</td>
+      <td>59.0</td>
       <td>3.0</td>
       <td>9.0</td>
       <td>2.0</td>
@@ -8729,8 +9010,6 @@ df
       <td>4.0</td>
       <td>10.0</td>
       <td>...</td>
-      <td>128</td>
-      <td>24</td>
       <td>98</td>
       <td>182</td>
       <td>1</td>
@@ -8739,6 +9018,8 @@ df
       <td>15</td>
       <td>25000000</td>
       <td>14.750000</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>30468</th>
@@ -8753,8 +9034,6 @@ df
       <td>1.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>2</td>
       <td>12</td>
       <td>0</td>
@@ -8763,13 +9042,15 @@ df
       <td>1</td>
       <td>6970959</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>30469</th>
       <td>30472</td>
       <td>2015-06-30</td>
       <td>64</td>
-      <td>32</td>
+      <td>32.0</td>
       <td>5.0</td>
       <td>15.0</td>
       <td>1.0</td>
@@ -8777,8 +9058,6 @@ df
       <td>2.0</td>
       <td>11.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>1</td>
       <td>6</td>
       <td>31</td>
       <td>1</td>
@@ -8787,13 +9066,15 @@ df
       <td>7</td>
       <td>13500000</td>
       <td>16.000000</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
     <tr>
       <th>30470</th>
       <td>30473</td>
       <td>2015-06-30</td>
       <td>43</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>1.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -8801,8 +9082,6 @@ df
       <td>2.0</td>
       <td>6.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>7</td>
       <td>16</td>
       <td>0</td>
@@ -8811,13 +9090,25 @@ df
       <td>10</td>
       <td>5600000</td>
       <td>14.000000</td>
+      <td>2015</td>
+      <td>Tuesday</td>
     </tr>
   </tbody>
 </table>
-<p>30471 rows × 293 columns</p>
+<p>30471 rows × 295 columns</p>
 </div>
 
 
+
+
+```python
+df['ts_year']=df['timestamp'].apply(lambda x:x.year)
+```
+
+
+```python
+df['ts_dayofweek']=df['timestamp'].apply(lambda x:x.dayofweek)
+```
 
 **Question 18: Add new features called 'ts_year' and 'ts_dayofweek', which indicate the year and the number of the day of the week.**
 
@@ -8825,27 +9116,75 @@ Hint: you can use apply() to apply functions to the data.
 
 
 ```python
-df['timestamp'].dayofweek
+df['ts_dayofweek']
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    AttributeError                            Traceback (most recent call last)
-
-    <ipython-input-328-65cc176deca5> in <module>()
-    ----> 1 df['timestamp'].dayofweek
-    
-
-    ~/anaconda3/lib/python3.6/site-packages/pandas/core/generic.py in __getattr__(self, name)
-       3079             if name in self._info_axis:
-       3080                 return self[name]
-    -> 3081             return object.__getattribute__(self, name)
-       3082 
-       3083     def __setattr__(self, name, value):
 
 
-    AttributeError: 'Series' object has no attribute 'dayofweek'
+    0        5
+    1        1
+    2        5
+    3        3
+    4        0
+    5        1
+    6        3
+    7        4
+    8        5
+    9        1
+    10       4
+    11       4
+    12       5
+    13       0
+    14       0
+    15       1
+    16       1
+    17       1
+    18       3
+    19       3
+    20       3
+    21       3
+    22       4
+    23       4
+    24       4
+    25       5
+    26       0
+    27       0
+    28       0
+    29       1
+            ..
+    30441    5
+    30442    5
+    30443    5
+    30444    5
+    30445    5
+    30446    5
+    30447    5
+    30448    5
+    30449    5
+    30450    0
+    30451    0
+    30452    0
+    30453    0
+    30454    0
+    30455    0
+    30456    0
+    30457    0
+    30458    0
+    30459    0
+    30460    0
+    30461    1
+    30462    1
+    30463    1
+    30464    1
+    30465    1
+    30466    1
+    30467    1
+    30468    1
+    30469    1
+    30470    1
+    Name: ts_dayofweek, Length: 30471, dtype: int64
+
 
 
 **Question 19: Draw histogram of price to see the distribution.**
@@ -8854,16 +9193,18 @@ Hint: You can use matplotlib or pandas for this histogram.
 
 
 ```python
-fig = plt.figure()
-ax = fig.add_subplot(111)
-ax.hist(df['price_doc'])
-plt.title('price distribution')
-plt.xlabel('price_doc')
-plt.show()
+df.price_doc.hist(bins=100)
 ```
 
 
-![png](output_43_0.png)
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x1142ea908>
+
+
+
+
+![png](output_51_1.png)
 
 
 **Question 20: From the plot in Q15, most of the data have smaller values and the right tail of the distribution is very long. Apply a logorithm transformation to price and add this as a new feature called 'log_price'.**
@@ -8872,16 +9213,14 @@ plt.show()
 ```python
 df['log_price'] = np.log(df['price_doc'])
 df
-fig = plt.figure()
-ax = fig.add_subplot(111)
-ax.hist(df['log_price'])
-plt.title('price distribution')
-plt.xlabel('log_price')
+plt.figure()
+plt.hist(df['log_price'],bins=100)
+plt.grid()
 plt.show()
 ```
 
 
-![png](output_45_0.png)
+![png](output_53_0.png)
 
 
 ** Question 21: Drop the log_price column.**
@@ -8924,8 +9263,6 @@ df
       <th>num_room</th>
       <th>kitch_sq</th>
       <th>...</th>
-      <th>cafe_count_5000_price_4000</th>
-      <th>cafe_count_5000_price_high</th>
       <th>big_church_count_5000</th>
       <th>church_count_5000</th>
       <th>mosque_count_5000</th>
@@ -8934,6 +9271,8 @@ df
       <th>market_count_5000</th>
       <th>price_doc</th>
       <th>room_size</th>
+      <th>ts_year</th>
+      <th>ts_dayofweek</th>
     </tr>
   </thead>
   <tbody>
@@ -8942,7 +9281,7 @@ df
       <td>1</td>
       <td>2011-08-20</td>
       <td>43</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -8950,8 +9289,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>4</td>
-      <td>0</td>
       <td>13</td>
       <td>22</td>
       <td>1</td>
@@ -8960,13 +9297,15 @@ df
       <td>4</td>
       <td>5850000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2</td>
       <td>2011-08-23</td>
       <td>34</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -8974,8 +9313,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>15</td>
       <td>29</td>
       <td>1</td>
@@ -8984,13 +9321,15 @@ df
       <td>14</td>
       <td>6000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
       <td>3</td>
       <td>2011-08-27</td>
       <td>43</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>2.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -8998,8 +9337,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>11</td>
       <td>27</td>
       <td>0</td>
@@ -9008,13 +9345,15 @@ df
       <td>10</td>
       <td>5700000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>3</th>
       <td>4</td>
       <td>2011-09-01</td>
       <td>89</td>
-      <td>50</td>
+      <td>50.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9022,8 +9361,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>2</td>
-      <td>1</td>
       <td>4</td>
       <td>4</td>
       <td>0</td>
@@ -9032,13 +9369,15 @@ df
       <td>3</td>
       <td>13100000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>4</th>
       <td>5</td>
       <td>2011-09-05</td>
       <td>77</td>
-      <td>77</td>
+      <td>77.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9046,8 +9385,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>108</td>
-      <td>17</td>
       <td>135</td>
       <td>236</td>
       <td>2</td>
@@ -9056,13 +9393,15 @@ df
       <td>14</td>
       <td>16331452</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>5</th>
       <td>6</td>
       <td>2011-09-06</td>
       <td>67</td>
-      <td>46</td>
+      <td>46.0</td>
       <td>14.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9070,8 +9409,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>14</td>
-      <td>1</td>
       <td>53</td>
       <td>78</td>
       <td>1</td>
@@ -9080,13 +9417,15 @@ df
       <td>17</td>
       <td>9100000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>6</th>
       <td>7</td>
       <td>2011-09-08</td>
       <td>25</td>
-      <td>14</td>
+      <td>14.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9094,8 +9433,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>16</td>
-      <td>3</td>
       <td>38</td>
       <td>80</td>
       <td>1</td>
@@ -9104,13 +9441,15 @@ df
       <td>8</td>
       <td>5500000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>7</th>
       <td>8</td>
       <td>2011-09-09</td>
       <td>44</td>
-      <td>44</td>
+      <td>44.0</td>
       <td>5.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9118,8 +9457,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>4</td>
-      <td>0</td>
       <td>11</td>
       <td>18</td>
       <td>1</td>
@@ -9128,13 +9465,15 @@ df
       <td>4</td>
       <td>2000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>8</th>
       <td>9</td>
       <td>2011-09-10</td>
       <td>42</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>5.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9142,8 +9481,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>8</td>
-      <td>1</td>
       <td>18</td>
       <td>34</td>
       <td>1</td>
@@ -9152,13 +9489,15 @@ df
       <td>11</td>
       <td>5300000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>9</th>
       <td>10</td>
       <td>2011-09-13</td>
       <td>36</td>
-      <td>21</td>
+      <td>21.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9166,8 +9505,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>13</td>
-      <td>0</td>
       <td>10</td>
       <td>20</td>
       <td>1</td>
@@ -9176,13 +9513,15 @@ df
       <td>1</td>
       <td>2000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>10</th>
       <td>11</td>
       <td>2011-09-16</td>
       <td>36</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>12.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9190,8 +9529,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>5</td>
       <td>9</td>
       <td>0</td>
@@ -9200,13 +9537,15 @@ df
       <td>6</td>
       <td>4650000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>11</th>
       <td>12</td>
       <td>2011-09-16</td>
       <td>38</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>11.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9214,8 +9553,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>10</td>
       <td>9</td>
       <td>0</td>
@@ -9224,13 +9561,15 @@ df
       <td>4</td>
       <td>4800000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>12</th>
       <td>13</td>
       <td>2011-09-17</td>
       <td>43</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9238,8 +9577,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>9</td>
-      <td>1</td>
       <td>7</td>
       <td>15</td>
       <td>0</td>
@@ -9248,13 +9585,15 @@ df
       <td>0</td>
       <td>5100000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>13</th>
       <td>14</td>
       <td>2011-09-19</td>
       <td>31</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9262,8 +9601,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>108</td>
-      <td>22</td>
       <td>57</td>
       <td>102</td>
       <td>1</td>
@@ -9272,13 +9609,15 @@ df
       <td>7</td>
       <td>5200000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>14</th>
       <td>15</td>
       <td>2011-09-19</td>
       <td>31</td>
-      <td>21</td>
+      <td>21.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9286,8 +9625,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>19</td>
-      <td>2</td>
       <td>63</td>
       <td>100</td>
       <td>0</td>
@@ -9296,13 +9633,15 @@ df
       <td>14</td>
       <td>5000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>15</th>
       <td>16</td>
       <td>2011-09-20</td>
       <td>51</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>15.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9310,8 +9649,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>9</td>
       <td>21</td>
       <td>0</td>
@@ -9320,13 +9657,15 @@ df
       <td>9</td>
       <td>1850000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>16</th>
       <td>17</td>
       <td>2011-09-20</td>
       <td>47</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9334,8 +9673,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>7</td>
       <td>23</td>
       <td>0</td>
@@ -9344,13 +9681,15 @@ df
       <td>13</td>
       <td>6300000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>17</th>
       <td>18</td>
       <td>2011-09-20</td>
       <td>42</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>2.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9358,8 +9697,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>6</td>
-      <td>0</td>
       <td>13</td>
       <td>33</td>
       <td>1</td>
@@ -9368,13 +9705,15 @@ df
       <td>12</td>
       <td>5900000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>18</th>
       <td>19</td>
       <td>2011-09-22</td>
       <td>59</td>
-      <td>33</td>
+      <td>33.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9382,8 +9721,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>6</td>
       <td>9</td>
       <td>0</td>
@@ -9392,13 +9729,15 @@ df
       <td>6</td>
       <td>7900000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>19</th>
       <td>20</td>
       <td>2011-09-22</td>
       <td>44</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9406,8 +9745,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>10</td>
       <td>14</td>
       <td>0</td>
@@ -9416,13 +9753,15 @@ df
       <td>5</td>
       <td>5200000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>20</th>
       <td>21</td>
       <td>2011-09-22</td>
       <td>74</td>
-      <td>44</td>
+      <td>44.0</td>
       <td>10.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9430,8 +9769,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>5</td>
       <td>0</td>
@@ -9440,13 +9777,15 @@ df
       <td>0</td>
       <td>8200000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>21</th>
       <td>22</td>
       <td>2011-09-22</td>
       <td>39</td>
-      <td>39</td>
+      <td>39.0</td>
       <td>7.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9454,8 +9793,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>12</td>
       <td>14</td>
       <td>0</td>
@@ -9464,13 +9801,15 @@ df
       <td>9</td>
       <td>5200000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>22</th>
       <td>23</td>
       <td>2011-09-23</td>
       <td>48</td>
-      <td>34</td>
+      <td>34.0</td>
       <td>6.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9478,8 +9817,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>4</td>
-      <td>1</td>
       <td>11</td>
       <td>10</td>
       <td>0</td>
@@ -9488,13 +9825,15 @@ df
       <td>8</td>
       <td>6250000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>23</th>
       <td>24</td>
       <td>2011-09-23</td>
       <td>32</td>
-      <td>18</td>
+      <td>18.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9502,8 +9841,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>7</td>
       <td>21</td>
       <td>1</td>
@@ -9512,13 +9849,15 @@ df
       <td>13</td>
       <td>5750000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>24</th>
       <td>25</td>
       <td>2011-09-23</td>
       <td>34</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>11.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9526,8 +9865,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>4</td>
-      <td>1</td>
       <td>8</td>
       <td>9</td>
       <td>0</td>
@@ -9536,13 +9873,15 @@ df
       <td>8</td>
       <td>6000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>25</th>
       <td>26</td>
       <td>2011-09-24</td>
       <td>45</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>9.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9550,8 +9889,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>15</td>
-      <td>1</td>
       <td>11</td>
       <td>23</td>
       <td>1</td>
@@ -9560,13 +9897,15 @@ df
       <td>1</td>
       <td>1050000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>26</th>
       <td>27</td>
       <td>2011-09-26</td>
       <td>35</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>4.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9574,8 +9913,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>5</td>
-      <td>0</td>
       <td>13</td>
       <td>25</td>
       <td>1</td>
@@ -9584,13 +9921,15 @@ df
       <td>4</td>
       <td>5000000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>27</th>
       <td>28</td>
       <td>2011-09-26</td>
       <td>38</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>6.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9598,8 +9937,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>2</td>
       <td>10</td>
       <td>0</td>
@@ -9608,13 +9945,15 @@ df
       <td>2</td>
       <td>4700000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>28</th>
       <td>29</td>
       <td>2011-09-26</td>
       <td>73</td>
-      <td>38</td>
+      <td>38.0</td>
       <td>15.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9622,8 +9961,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>17</td>
       <td>35</td>
       <td>0</td>
@@ -9632,13 +9969,15 @@ df
       <td>7</td>
       <td>8254400</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>29</th>
       <td>30</td>
       <td>2011-09-27</td>
       <td>42</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>3.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -9646,8 +9985,6 @@ df
       <td>NaN</td>
       <td>NaN</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>12</td>
       <td>17</td>
       <td>0</td>
@@ -9656,6 +9993,8 @@ df
       <td>5</td>
       <td>5900000</td>
       <td>NaN</td>
+      <td>2011</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>...</th>
@@ -9686,7 +10025,7 @@ df
       <td>30444</td>
       <td>2015-06-27</td>
       <td>113</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>26.0</td>
       <td>26.0</td>
       <td>1.0</td>
@@ -9694,8 +10033,6 @@ df
       <td>4.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>141</td>
-      <td>26</td>
       <td>150</td>
       <td>249</td>
       <td>2</td>
@@ -9704,13 +10041,15 @@ df
       <td>13</td>
       <td>25039300</td>
       <td>0.250000</td>
+      <td>2015</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>30442</th>
       <td>30445</td>
       <td>2015-06-27</td>
       <td>40</td>
-      <td>40</td>
+      <td>40.0</td>
       <td>2.0</td>
       <td>12.0</td>
       <td>4.0</td>
@@ -9718,8 +10057,6 @@ df
       <td>1.0</td>
       <td>10.0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>7</td>
       <td>1</td>
@@ -9728,6 +10065,8 @@ df
       <td>1</td>
       <td>4350000</td>
       <td>40.000000</td>
+      <td>2015</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>30443</th>
@@ -9742,8 +10081,6 @@ df
       <td>3.0</td>
       <td>79.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>5</td>
       <td>14</td>
       <td>0</td>
@@ -9752,6 +10089,8 @@ df
       <td>2</td>
       <td>7567425</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>30444</th>
@@ -9766,8 +10105,6 @@ df
       <td>3.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>4</td>
-      <td>1</td>
       <td>5</td>
       <td>7</td>
       <td>0</td>
@@ -9776,13 +10113,15 @@ df
       <td>5</td>
       <td>11438948</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>30445</th>
       <td>30448</td>
       <td>2015-06-27</td>
       <td>47</td>
-      <td>47</td>
+      <td>47.0</td>
       <td>19.0</td>
       <td>25.0</td>
       <td>1.0</td>
@@ -9790,8 +10129,6 @@ df
       <td>1.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>57</td>
-      <td>12</td>
       <td>23</td>
       <td>42</td>
       <td>1</td>
@@ -9800,13 +10137,15 @@ df
       <td>7</td>
       <td>10139368</td>
       <td>47.000000</td>
+      <td>2015</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>30446</th>
       <td>30449</td>
       <td>2015-06-27</td>
       <td>82</td>
-      <td>82</td>
+      <td>82.0</td>
       <td>8.0</td>
       <td>8.0</td>
       <td>6.0</td>
@@ -9815,8 +10154,6 @@ df
       <td>1.0</td>
       <td>...</td>
       <td>2</td>
-      <td>0</td>
-      <td>2</td>
       <td>9</td>
       <td>0</td>
       <td>0</td>
@@ -9824,6 +10161,8 @@ df
       <td>2</td>
       <td>6125400</td>
       <td>41.000000</td>
+      <td>2015</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>30447</th>
@@ -9838,8 +10177,6 @@ df
       <td>2.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>5</td>
       <td>14</td>
       <td>0</td>
@@ -9848,6 +10185,8 @@ df
       <td>2</td>
       <td>6373324</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>30448</th>
@@ -9862,8 +10201,6 @@ df
       <td>3.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>7</td>
       <td>0</td>
@@ -9872,13 +10209,15 @@ df
       <td>0</td>
       <td>6888144</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>30449</th>
       <td>30452</td>
       <td>2015-06-27</td>
       <td>47</td>
-      <td>47</td>
+      <td>47.0</td>
       <td>7.0</td>
       <td>25.0</td>
       <td>1.0</td>
@@ -9886,8 +10225,6 @@ df
       <td>1.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>57</td>
-      <td>12</td>
       <td>23</td>
       <td>42</td>
       <td>1</td>
@@ -9896,6 +10233,8 @@ df
       <td>7</td>
       <td>9227657</td>
       <td>47.000000</td>
+      <td>2015</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>30450</th>
@@ -9910,8 +10249,6 @@ df
       <td>2.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>4</td>
-      <td>0</td>
       <td>13</td>
       <td>28</td>
       <td>1</td>
@@ -9920,6 +10257,8 @@ df
       <td>5</td>
       <td>12610000</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30451</th>
@@ -9940,17 +10279,17 @@ df
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>2394300</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30452</th>
       <td>30455</td>
       <td>2015-06-29</td>
       <td>38</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>7.0</td>
       <td>17.0</td>
       <td>1.0</td>
@@ -9958,8 +10297,6 @@ df
       <td>1.0</td>
       <td>7.0</td>
       <td>...</td>
-      <td>12</td>
-      <td>0</td>
       <td>8</td>
       <td>23</td>
       <td>1</td>
@@ -9968,13 +10305,15 @@ df
       <td>2</td>
       <td>6800000</td>
       <td>19.000000</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30453</th>
       <td>30456</td>
       <td>2015-06-29</td>
       <td>45</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>6.0</td>
       <td>15.0</td>
       <td>6.0</td>
@@ -9982,8 +10321,6 @@ df
       <td>1.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>3</td>
       <td>8</td>
       <td>1</td>
@@ -9992,13 +10329,15 @@ df
       <td>3</td>
       <td>4066740</td>
       <td>1.000000</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30454</th>
       <td>30457</td>
       <td>2015-06-29</td>
       <td>40</td>
-      <td>26</td>
+      <td>26.0</td>
       <td>3.0</td>
       <td>9.0</td>
       <td>2.0</td>
@@ -10006,8 +10345,6 @@ df
       <td>2.0</td>
       <td>5.0</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>17</td>
       <td>29</td>
       <td>0</td>
@@ -10016,13 +10353,15 @@ df
       <td>4</td>
       <td>6300000</td>
       <td>13.000000</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30455</th>
       <td>30458</td>
       <td>2015-06-29</td>
       <td>79</td>
-      <td>79</td>
+      <td>79.0</td>
       <td>3.0</td>
       <td>3.0</td>
       <td>1.0</td>
@@ -10030,8 +10369,6 @@ df
       <td>3.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>2</td>
       <td>12</td>
       <td>0</td>
@@ -10040,13 +10377,15 @@ df
       <td>0</td>
       <td>9014972</td>
       <td>26.333333</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30456</th>
       <td>30459</td>
       <td>2015-06-29</td>
       <td>52</td>
-      <td>30</td>
+      <td>30.0</td>
       <td>8.0</td>
       <td>14.0</td>
       <td>1.0</td>
@@ -10054,8 +10393,6 @@ df
       <td>2.0</td>
       <td>8.0</td>
       <td>...</td>
-      <td>4</td>
-      <td>1</td>
       <td>5</td>
       <td>7</td>
       <td>0</td>
@@ -10064,13 +10401,15 @@ df
       <td>6</td>
       <td>1000000</td>
       <td>15.000000</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30457</th>
       <td>30460</td>
       <td>2015-06-29</td>
       <td>58</td>
-      <td>43</td>
+      <td>43.0</td>
       <td>7.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -10078,8 +10417,6 @@ df
       <td>3.0</td>
       <td>6.0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>8</td>
       <td>7</td>
       <td>1</td>
@@ -10088,13 +10425,15 @@ df
       <td>1</td>
       <td>7800000</td>
       <td>14.333333</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30458</th>
       <td>30461</td>
       <td>2015-06-29</td>
       <td>50</td>
-      <td>1</td>
+      <td>1.0</td>
       <td>7.0</td>
       <td>7.0</td>
       <td>1.0</td>
@@ -10102,8 +10441,6 @@ df
       <td>1.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>5</td>
       <td>15</td>
       <td>0</td>
@@ -10112,6 +10449,8 @@ df
       <td>3</td>
       <td>6370777</td>
       <td>1.000000</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30459</th>
@@ -10126,8 +10465,6 @@ df
       <td>2.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>5</td>
       <td>14</td>
       <td>0</td>
@@ -10136,13 +10473,15 @@ df
       <td>2</td>
       <td>5778893</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30460</th>
       <td>30463</td>
       <td>2015-06-29</td>
       <td>54</td>
-      <td>32</td>
+      <td>32.0</td>
       <td>8.0</td>
       <td>16.0</td>
       <td>1.0</td>
@@ -10150,8 +10489,6 @@ df
       <td>2.0</td>
       <td>9.0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
       <td>6</td>
       <td>25</td>
       <td>0</td>
@@ -10160,13 +10497,15 @@ df
       <td>8</td>
       <td>9500000</td>
       <td>16.000000</td>
+      <td>2015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>30461</th>
       <td>30464</td>
       <td>2015-06-30</td>
       <td>36</td>
-      <td>19</td>
+      <td>19.0</td>
       <td>5.0</td>
       <td>16.0</td>
       <td>1.0</td>
@@ -10175,8 +10514,6 @@ df
       <td>8.0</td>
       <td>...</td>
       <td>4</td>
-      <td>1</td>
-      <td>4</td>
       <td>35</td>
       <td>1</td>
       <td>6</td>
@@ -10184,13 +10521,15 @@ df
       <td>6</td>
       <td>5000000</td>
       <td>19.000000</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30462</th>
       <td>30465</td>
       <td>2015-06-30</td>
       <td>47</td>
-      <td>30</td>
+      <td>30.0</td>
       <td>23.0</td>
       <td>25.0</td>
       <td>4.0</td>
@@ -10198,8 +10537,6 @@ df
       <td>1.0</td>
       <td>10.0</td>
       <td>...</td>
-      <td>57</td>
-      <td>12</td>
       <td>23</td>
       <td>42</td>
       <td>1</td>
@@ -10208,13 +10545,15 @@ df
       <td>7</td>
       <td>10544070</td>
       <td>30.000000</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30463</th>
       <td>30466</td>
       <td>2015-06-30</td>
       <td>56</td>
-      <td>29</td>
+      <td>29.0</td>
       <td>13.0</td>
       <td>14.0</td>
       <td>1.0</td>
@@ -10222,8 +10561,6 @@ df
       <td>2.0</td>
       <td>11.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>13</td>
       <td>12</td>
       <td>0</td>
@@ -10232,13 +10569,15 @@ df
       <td>6</td>
       <td>12000000</td>
       <td>14.500000</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30464</th>
       <td>30467</td>
       <td>2015-06-30</td>
       <td>56</td>
-      <td>51</td>
+      <td>51.0</td>
       <td>19.0</td>
       <td>19.0</td>
       <td>1.0</td>
@@ -10246,8 +10585,6 @@ df
       <td>2.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>3</td>
-      <td>0</td>
       <td>14</td>
       <td>29</td>
       <td>1</td>
@@ -10256,6 +10593,8 @@ df
       <td>6</td>
       <td>10262010</td>
       <td>25.500000</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30465</th>
@@ -10270,8 +10609,6 @@ df
       <td>2.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>141</td>
-      <td>26</td>
       <td>150</td>
       <td>249</td>
       <td>2</td>
@@ -10280,13 +10617,15 @@ df
       <td>13</td>
       <td>6750554</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30466</th>
       <td>30469</td>
       <td>2015-06-30</td>
       <td>44</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>7.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -10294,8 +10633,6 @@ df
       <td>2.0</td>
       <td>6.0</td>
       <td>...</td>
-      <td>5</td>
-      <td>0</td>
       <td>15</td>
       <td>26</td>
       <td>1</td>
@@ -10304,13 +10641,15 @@ df
       <td>6</td>
       <td>7400000</td>
       <td>13.500000</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30467</th>
       <td>30470</td>
       <td>2015-06-30</td>
       <td>86</td>
-      <td>59</td>
+      <td>59.0</td>
       <td>3.0</td>
       <td>9.0</td>
       <td>2.0</td>
@@ -10318,8 +10657,6 @@ df
       <td>4.0</td>
       <td>10.0</td>
       <td>...</td>
-      <td>128</td>
-      <td>24</td>
       <td>98</td>
       <td>182</td>
       <td>1</td>
@@ -10328,6 +10665,8 @@ df
       <td>15</td>
       <td>25000000</td>
       <td>14.750000</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30468</th>
@@ -10342,8 +10681,6 @@ df
       <td>1.0</td>
       <td>1.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>0</td>
       <td>2</td>
       <td>12</td>
       <td>0</td>
@@ -10352,13 +10689,15 @@ df
       <td>1</td>
       <td>6970959</td>
       <td>NaN</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30469</th>
       <td>30472</td>
       <td>2015-06-30</td>
       <td>64</td>
-      <td>32</td>
+      <td>32.0</td>
       <td>5.0</td>
       <td>15.0</td>
       <td>1.0</td>
@@ -10366,8 +10705,6 @@ df
       <td>2.0</td>
       <td>11.0</td>
       <td>...</td>
-      <td>1</td>
-      <td>1</td>
       <td>6</td>
       <td>31</td>
       <td>1</td>
@@ -10376,13 +10713,15 @@ df
       <td>7</td>
       <td>13500000</td>
       <td>16.000000</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30470</th>
       <td>30473</td>
       <td>2015-06-30</td>
       <td>43</td>
-      <td>28</td>
+      <td>28.0</td>
       <td>1.0</td>
       <td>9.0</td>
       <td>1.0</td>
@@ -10390,8 +10729,6 @@ df
       <td>2.0</td>
       <td>6.0</td>
       <td>...</td>
-      <td>2</td>
-      <td>0</td>
       <td>7</td>
       <td>16</td>
       <td>0</td>
@@ -10400,10 +10737,12 @@ df
       <td>10</td>
       <td>5600000</td>
       <td>14.000000</td>
+      <td>2015</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>30471 rows × 293 columns</p>
+<p>30471 rows × 295 columns</p>
 </div>
 
 
